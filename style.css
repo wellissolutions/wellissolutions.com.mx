@@ -1,0 +1,225 @@
+/* ==== ESTILO GLOBAL ==== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #0a0a0a;
+  color: #e6e6e6;
+  line-height: 1.6;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #001f3f, #0074D9);
+  padding: 20px 50px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 50px;
+  margin-right: 10px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: #00bfff;
+}
+
+/* ==== HERO ==== */
+.hero {
+  background: url('marketing-bg.jpg') center/cover no-repeat;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+
+.hero-text h2 {
+  font-size: 2.5rem;
+  color: #00bfff;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin: 20px 0;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #00bfff;
+  color: #000;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #0088cc;
+  color: white;
+}
+
+/* ==== SECCIONES ==== */
+section {
+  padding: 60px 10%;
+  text-align: center;
+}
+
+h2 {
+  color: #00bfff;
+  margin-bottom: 40px;
+  font-size: 2rem;
+}
+
+/* ==== SERVICIOS ==== */
+.services-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.service-card {
+  background: #111;
+  border: 1px solid #0074D9;
+  border-radius: 12px;
+  padding: 20px;
+  width: 300px;
+  transition: 0.3s;
+  text-align: center;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px #0074D9;
+}
+
+.service-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+/* ==== PORTAFOLIO ==== */
+.portfolio-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.portfolio-container img {
+  width: 300px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.portfolio-container img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #00bfff;
+}
+
+/* ==== RESULTADOS ==== */
+.results-img img {
+  width: 80%;
+  max-width: 700px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+  box-shadow: 0 0 20px #0074D9;
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.stat {
+  background: #111;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #00bfff;
+  width: 150px;
+}
+
+.stat h3 {
+  font-size: 2rem;
+  color: #00bfff;
+}
+
+/* ==== CONTACTO ==== */
+.contact-info {
+  background: #111;
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid #0074D9;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+/* ==== FOOTER ==== */
+footer {
+  background: #001f3f;
+  text-align: center;
+  padding: 20px;
+  color: #ccc;
+  margin-top: 50px;
+}
+
+/* ==== ANIMACIONES ==== */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ==== RESPONSIVE ==== */
+@media (max-width: 768px) {
+  .services-container, .stats {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .portfolio-container img {
+    width: 90%;
+  }
+}

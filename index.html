@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wellis Solutions | Marketing y Desarrollo Web</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="logo.png" alt="Logotipo Wellis Solutions">
+      <h1>Wellis Solutions</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#portafolio">Portafolio</a></li>
+        <li><a href="#resultados">Resultados</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="inicio" class="hero">
+    <div class="hero-text fade-in">
+      <h2>Impulsa tu marca con estrategias digitales efectivas</h2>
+      <p>Somos especialistas en marketing y desarrollo web. Transformamos ideas en resultados.</p>
+      <a href="#contacto" class="btn">Contáctanos</a>
+    </div>
+  </section>
+
+  <section id="servicios">
+    <h2>Servicios</h2>
+    <div class="services-container">
+      <div class="service-card fade-in">
+        <img src="marketing.jpg" alt="Marketing Digital">
+        <h3>Marketing Digital</h3>
+        <p>Campañas estratégicas que posicionan tu marca y generan resultados medibles.</p>
+      </div>
+      <div class="service-card fade-in">
+        <img src="webdev.jpg" alt="Desarrollo Web">
+        <h3>Desarrollo Web</h3>
+        <p>Diseños modernos, optimizados y adaptables que reflejan la identidad de tu negocio.</p>
+      </div>
+      <div class="service-card fade-in">
+        <img src="seo.jpg" alt="SEO y Análisis">
+        <h3>SEO y Análisis</h3>
+        <p>Optimización para motores de búsqueda y análisis de datos para maximizar el rendimiento.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="portafolio">
+    <h2>Portafolio</h2>
+    <div class="portfolio-container">
+      <img src="project1.jpg" alt="Proyecto Marketing" class="fade-in">
+      <img src="project2.jpg" alt="Proyecto Web" class="fade-in">
+      <img src="project3.jpg" alt="Proyecto SEO" class="fade-in">
+    </div>
+  </section>
+
+  <section id="resultados">
+    <h2>Resultados</h2>
+    <div class="results-img fade-in">
+      <img src="results-graph.jpg" alt="Gráfica de Crecimiento">
+    </div>
+    <p>De enero a diciembre, aumentamos las ventas de nuestros clientes de 100 mil a 5 millones, con un crecimiento del <strong>66%</strong>.</p>
+    <div class="stats fade-in">
+      <div class="stat">
+        <h3>+5M</h3>
+        <p>Ventas generadas</p>
+      </div>
+      <div class="stat">
+        <h3>66%</h3>
+        <p>Crecimiento promedio</p>
+      </div>
+      <div class="stat">
+        <h3>+100</h3>
+        <p>Proyectos completados</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <div class="contact-info fade-in">
+      <p><strong>Correo:</strong> managment@wellissolutions.com.mx</p>
+      <p><strong>Teléfono:</strong> 33 4722 2490</p>
+      <p><strong>Dirección:</strong> Av. Patria 747, Jardines de Guadalupe, 45030 Zapopan, Jalisco</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Wellis Solutions. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Script de animación -->
+  <script>
+    const elements = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    elements.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
